@@ -22,4 +22,6 @@
 ##### Go to [UpTimeRobot](https://uptimerobot.com/), and make a new account (you can use a temporary email from [generator.email](https://generator.email) if you don't want to use your real one)
 ##### Add a new monitor
 ##### Choose HTTP(s) as the monitor type
-##### 
+##### Set the monitor interval as 30 minutes
+##### Set the monitor timeout as 1 minute
+##### Then create monitor
