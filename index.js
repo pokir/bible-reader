@@ -42,4 +42,6 @@ client.on("interactionCreate", async interaction => {
   }
 })
 
+require("./replit_server.js") // for keeping the bot alive on replit only
+
 client.login(config.botToken)
