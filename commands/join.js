@@ -44,6 +44,9 @@ module.exports = {
       }
     })
 
-    await interaction.reply({ content: "Joined voice channel `" + voiceChannel.name + "`", ephemeral: true })
+    if (voiceChannel.type === "GUILD_VOICE")
+      await interaction.reply({ content: "Joined voice channel `" + voiceChannel.name + "`", ephemeral: true })
+    else
+      await interaction.reply({ content: "Joined stage channel `" + voiceChannel.name + "`; don't forget to right click me and invite me to speak", ephemeral: true })
   },
 }
