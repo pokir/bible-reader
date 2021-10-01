@@ -1,7 +1,7 @@
 ## BibleReader
 
 #### Setup
-##### Put BOT_TOKEN, DEVELOPMENT_GUILD_ID, and GUILD_ID in .env file
+##### Put BOT_TOKEN, DEVELOPMENT_GUILD_ID, and CLIENT_ID in `.env` file
 ##### Run `npm install` to install required node modules
 ##### Run `node deploy_commands_dev.js` to deploy the slash commands to your development server, or `node deploy_commands_global.js` to deploy to all servers
 ###### Note that you must only do this when you update/edit any slash commands
@@ -13,6 +13,7 @@
 
 #### Hosting on [Replit](https://replit.com)
 ##### To host this bot on [Replit](https://replit.com), make a new account, create a new "repl", select NodeJS as the language, and upload all the files
+##### On replit, there is no need of a `.env` file; instead, use their secret token/values feature and add BOT_TOKEN, DEVELOPMENT_GUILD_ID, and CLIENT_ID
 ##### Run `node -v` in the replit shell. If the version is under v16, run this command: `npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH`
 ###### Make sure to do this everytime you reopen replit because it can reset the node version
 ##### Then, run `npm install` to install all the node packages required
