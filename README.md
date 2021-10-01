@@ -13,10 +13,9 @@
 ## Hosting on [Replit](https://replit.com)
 ##### To host this bot on [Replit](https://replit.com), make a new account, create a new "repl", select NodeJS as the language, and upload all the files
 ##### On replit, there is no need of a `.env` file; instead, use their secret token/values feature and add BOT_TOKEN, DEVELOPMENT_GUILD_ID, and CLIENT_ID
-##### Run `node -v` in the replit shell. If the version is under v16, run this command: `npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH`
-###### Make sure to do this everytime you reopen replit because it can reset the node version
+##### Run `node -v` in the replit shell. If the version is under v16, run this command: `npm init -y && npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH` (Make sure to do this everytime you reopen replit because it can reset the node version)
 ##### Then, run `npm install` to install all the node packages required
-##### The steps above are already in the .replit file, so you can skip them if you want
+##### The two steps above are already in the .replit file, so you can skip them if you want
 ##### Then click on run to run the bot
 ##### The `replit_server.js` file creates a dummy webpage so that [UpTimeRobot](https://uptimerobot.com) can ping it and keep the app alive
 ##### Go to [UpTimeRobot](https://uptimerobot.com/), and make a new account
