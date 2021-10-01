@@ -6,7 +6,7 @@
 ##### Run `node deploy_commands_dev.js` to deploy the slash commands to your development server, or `node deploy_commands_global.js` to deploy to all servers (Note that you must only do this when you update/edit any slash commands)
 ##### Run `node index.js` to run the bot
 
-#### Usage
+## Usage
 ##### This bot uses slash commands (ex. /ping); type / in the chat and all the commands will show up
 ##### When choosing to connect the bot to a stage channel, it must be invited to speak before reading
 
