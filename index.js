@@ -7,9 +7,6 @@ const fs = require("fs")
 const { Client, Collection, Intents } = require("discord.js")
 
 
-//https://www.youtube.com/watch?v=TeiePQGt-HA
-// https://www.audioverse.org/english/audiobibles/books/ENGKJV/O/1Sam/1
-
 const client = new Client({
   shards: "auto",
   intents: [
