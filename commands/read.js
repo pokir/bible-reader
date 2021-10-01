@@ -88,6 +88,9 @@ module.exports = {
       }
     })
 
-    await interaction.reply({ content: "Started reading", ephemeral: true })
+    if (interaction.options.getBoolean("forever") === true)
+      await interaction.reply({ content: "Started reading 24/7; to stop reading use /stop", ephemeral: true })
+    else 
+      await interaction.reply({ content: "Started reading", ephemeral: true })
   },
 }
