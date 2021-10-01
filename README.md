@@ -24,6 +24,6 @@
 ##### Choose HTTP(s) as the monitor type
 ##### Set name as `bible-reader` or anything you want
 ##### Enter the URL of the dummy replit webpage (it will show up at the top right when clicking run)
-##### Set the monitor interval as 30 minutes (it must be exactly 30 minutes)
+##### Set the monitor interval as 5 minutes
 ##### Then create monitor (no need for alert contact)
 ##### You can then close replit and it will stay alive
