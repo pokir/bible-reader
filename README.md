@@ -4,7 +4,7 @@
 ##### Put BOT_TOKEN, DEVELOPMENT_GUILD_ID, and GUILD_ID in .env file
 ##### Run `npm install` to install required node modules
 ##### Run `node deploy_commands_dev.js` to deploy the slash commands to your development server, or `node deploy_commands_global.js` to deploy to all servers
-###### Note that you must do this everytime you update/edit any slash commands
+###### Note that you must only do this everytime you update/edit any slash commands
 ##### Run `node index.js` to run the bot
 
 #### Usage
