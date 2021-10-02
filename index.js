@@ -15,6 +15,7 @@ const client = new Client({
   ],
 })
 
+client.user.setActivity("the Bible", { type: "WATCHING" })
 client.commands = new Collection()
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"))
 
@@ -39,6 +40,17 @@ client.on("interactionCreate", async interaction => {
   } catch (error) {
     console.error(error)
     await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true })
+  }
+})
+
+// auto speaker in stage channels
+client.on("voiceStateUpdate", async (oldState, newState) => {
+  if (newState.channelId && newState.channel.type === "GUILD_STAGE_VOICE" && newState.guild.me.voice.suppress) {
+    try {
+      await newState.guild.me.voice.setSuppressed(false)
+    } catch (error) {
+      console.error(error)
+    }
   }
 })
 

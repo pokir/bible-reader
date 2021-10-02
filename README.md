@@ -10,7 +10,6 @@
 
 ## Usage
 ##### This bot uses slash commands (ex. /ping); type / in the chat and all the commands will show up
-##### When choosing to connect the bot to a stage channel, it must be invited to speak before reading
 
 ## Hosting on [Replit](https://replit.com)
 ##### To host this bot on [Replit](https://replit.com), make a new account, create a new "repl", select NodeJS as the language, and upload all the files
