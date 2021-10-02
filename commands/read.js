@@ -6,7 +6,6 @@ const { getVoiceConnection, createAudioPlayer, createAudioResource, AudioPlayerS
 
 function getAudioURL(chapter) {
   // chapter must be a valid chapter inside bibleChapters
-
   const urlStart = "https://audiobible.com/content/KingJames/audio/"
 
   let book = chapter.split(" ")
@@ -19,7 +18,7 @@ function getAudioURL(chapter) {
     secondPadding = 2
   }
 
-  const temp = `${String(number).padStart(2, "0")}_${book.join("-").toLowerCase()}`
+  const temp = `${String(number).padStart(2, "0")}_${book.join("-").toLowerCase().replace("song-of-solomon", "songofsolomon")}`
   const urlEnd = `${temp}/${temp}_${chapterNumber.padStart(secondPadding, "0")}`
 
   return urlStart + urlEnd + ".mp3"
@@ -55,6 +54,7 @@ module.exports = {
       return
     }
 
+    console.log(getAudioURL(chapter))
     const resource = createAudioResource(getAudioURL(chapter), {
       metadata: {
         title: chapter.replace(/\w+/g, c => c[0].toUpperCase() + c.slice(1))
