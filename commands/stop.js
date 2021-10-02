@@ -17,6 +17,7 @@ module.exports = {
     }
 
     connection.state.subscription.player.stop()
+    connection.state.subscription.unsubscribe()
     
     await interaction.reply({ content: "Stopped reading", ephemeral: true })
   },

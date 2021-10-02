@@ -55,7 +55,11 @@ module.exports = {
       return
     }
 
-    const resource = createAudioResource(getAudioURL(chapter))
+    const resource = createAudioResource(getAudioURL(chapter), {
+      metadata: {
+        title: chapter.replace(/\w+/g, c => c[0].toUpperCase() + c.slice(1))
+      }
+    })
 
     const player = createAudioPlayer()
 
@@ -79,9 +83,16 @@ module.exports = {
       // choose the next chapter when done with chapter
       if (interaction.options.getBoolean("forever") === true) {
         let nextChapterIndex = bibleChapters.indexOf(chapter) + 1
-        if (nextChapterIndex > bibleChapters.length - 1) nextChapterIndex = 0
+        if (nextChapterIndex > bibleChapters.length - 1)
+          nextChapterIndex = 0
         chapter = bibleChapters[nextChapterIndex]
-        const nextResource = createAudioResource(getAudioURL(chapter))
+
+        const nextResource = createAudioResource(getAudioURL(chapter), {
+          metadata: {
+            title: chapter.replace(/\w+/g, c => c[0].toUpperCase() + c.slice(1))
+          }
+        })
+
         player.play(nextResource)
       } else {
         player.stop()
