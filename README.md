@@ -4,7 +4,7 @@
 ##### NodeJS version 16 is required to run this program
 ##### Put BOT_TOKEN, DEVELOPMENT_GUILD_ID, and CLIENT_ID in `.env` file
 ##### Run `npm install` to install required node modules
-##### Run `node deploy_commands_dev.js` to deploy the slash commands to your development server, or `node deploy_commands_global.js` to deploy to all servers (Note that you must only do this when you update/edit any slash commands)
+##### Run `node deploy_commands_dev.js` to deploy the slash commands to your development server, or `node deploy_commands_global.js` to deploy to all servers (Note that you must only do this once and then when you update/edit any slash commands)
 ##### Also make sure to use a separate server for development, because all the commands will be duplicate when you deploy them globally (there might be a way to remove them though)
 ##### Run `node index.js` to run the bot
 
