@@ -15,7 +15,6 @@ const client = new Client({
   ],
 })
 
-client.user.setActivity("the Bible", { type: "WATCHING" })
 client.commands = new Collection()
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"))
 
@@ -57,3 +56,4 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 require("./replit_server.js") // for keeping the bot alive on replit only
 
 client.login(config.botToken)
+client.user.setActivity("the Bible", { type: "WATCHING" })
