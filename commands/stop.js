@@ -6,7 +6,6 @@ module.exports = {
   data: new SlashCommandBuilder()
           .setName("stop")
           .setDescription("Stop reading the Bible"),
-
   
   async execute(interaction) {
     const connection = getVoiceConnection(interaction.guildId)

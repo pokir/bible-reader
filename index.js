@@ -24,7 +24,10 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
+  // setup stuff
   client.user.setActivity("the Bible", { type: "WATCHING" })
+  client.user
+
   console.log("Ready!")
 })
 
@@ -54,6 +57,9 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
   }
 })
 
+//client.on("debug", console.log)
+
 require("./replit_server.js") // for keeping the bot alive on replit only
+require("./logger.js")(client) // for logging all client events
 
 client.login(config.botToken)
