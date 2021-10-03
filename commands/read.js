@@ -54,7 +54,7 @@ module.exports = {
       return
     }
 
-    console.log(getAudioURL(chapter))
+    //console.log(getAudioURL(chapter))
     const resource = createAudioResource(getAudioURL(chapter), {
       metadata: {
         title: chapter.replace(/\w+/g, c => c[0].toUpperCase() + c.slice(1))
