@@ -60,6 +60,8 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 //client.on("debug", console.log)
 
 require("./replit_server.js") // for keeping the bot alive on replit only
+
+fs.mkdir("logs", () => {})
 require("./logger.js")(client, "logs/events.log", "logs/debug.log") // for logging stuff
 
 client.login(config.botToken)
